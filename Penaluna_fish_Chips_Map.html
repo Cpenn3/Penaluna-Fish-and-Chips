@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8">
+  <title>Penaluna Fish And Chips Map</title>
+  <link href="styles.css" rel="stylesheet">
+  <script src="scripts.js"></script>
+ </head>
+ <body>
+  <style>
+   .topBar {
+    position: fixed;
+    z-index: 3;
+    top: 35px;
+    left: 65%;
+    word-spacing: 4em;
+    font-size: 25px;
+    font-family: helvetica;
+    font-weight: 700;
+    color: #38c3ff
+   }
+
+   #logo {
+    width: 70px;
+    height: 70px;
+    position: fixed;
+    z-index: 3;
+    left: 20px top:0px;
+   }
+
+   .header {
+    background-color: #fff;
+    position: fixed;
+    width: 100%;
+    height: 90px;
+    top: 0;
+    left: 0;
+    color: #fff;
+    z-index: 2;
+   }
+
+   a {
+    text-decoration: none
+   }
+
+   a:visited {
+    color: #38c3ff
+   }
+
+   #Menu:Hover {
+    color: #0040ff
+   }
+
+   #Home:Hover {
+    color: #0040ff
+   }
+
+   #Contact:Hover {
+    color: #0040ff
+   }
+
+   #Map:Hover {
+    color: #0040ff
+   }
+
+   #Contact {
+    word-spacing: 0
+   }
+
+   #maps {
+    position: absolute;
+    margin: -300px;
+    left: 50%;
+    top: 50%;
+   }
+
+   body {
+    background: #38c3ff;
+   }
+
+   .find {
+    position: absolute;
+    text-align: center;
+    font-family: helvetica;
+    font-weight: bold;
+    color: rgb(999, 999, 999);
+    font-size: 30px;
+    top: 700px;
+    left: 400px;
+   }
+
+   .findus {
+    position: absolute;
+    top: 100px;
+    left: 825px;
+    color: #FFF;
+    z-index: 3;
+    font-size: 30px;
+    font-family: helvetica;
+    font-weight: bold;
+   }
+
+   #fish1 {
+    position: absolute;
+    width: 125px;
+    top: 800px;
+    left: 50px;
+    z-index: 1;
+    transform: rotate(-45deg);
+   }
+
+   #fish2 {
+    position: absolute;
+    width: 125px;
+    top: 700px;
+    left: 250px;
+    z-index: 1;
+    transform: rotate(-15deg);
+   }
+
+   #fish3 {
+    position: absolute;
+    width: 125px;
+    top: 700px;
+    left: 500px;
+    z-index: -1;
+    transform: rotate(15deg);
+   }
+
+   #fish4 {
+    position: absolute;
+    width: 125px;
+    top: 800px;
+    left: 700px;
+    z-index: -1;
+    transform: rotate(35deg);
+   }
+
+   #fish5 {
+    position: absolute;
+    width: 125px;
+    top: 800px;
+    left: 900px;
+    transform: rotate(-15deg);
+   }
+
+   #fish6 {
+    position: absolute;
+    width: 125px;
+    top: 700px;
+    left: 1100px;
+    z-index: -1;
+    transform: rotate(-35deg);
+   }
+
+   #fish7 {
+    position: absolute;
+    width: 125px;
+    top: 550px;
+    left: 1200px;
+    z-index: -1;
+    transform: rotate(-65deg);
+   }
+
+   #fish8 {
+    position: absolute;
+    width: 125px;
+    top: 350px;
+    left: 1200px;
+    z-index: -1;
+    transform: rotate(-110deg);
+   }
+
+   #fish9 {
+    position: absolute;
+    width: 125px;
+    top: 200px;
+    left: 1100px;
+    z-index: -1;
+    transform: rotate(-130deg);
+   }
+
+   #fish10 {
+    position: absolute;
+    width: 125px;
+    top: 150px;
+    left: 950px;
+    z-index: -1;
+    transform: rotate(-170deg);
+   }
+
+   #fish11 {
+    position: absolute;
+    width: 125px;
+    top: 100px;
+    left: 800px;
+    z-index: -1;
+    transform: rotate(-150deg);
+   }
+
+   #fish12 {
+    position: absolute;
+    width: 125px;
+    top: 10px;
+    left: 700px;
+    transform: rotate(-100deg);
+   }
+
+   #cllogo {
+    position: absolute;
+    z-index: 1;
+    top: 150px;
+    left: 84%;
+   }
+
+   footer {
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    left: 0px;
+    top: 970px;
+    height: 50px;
+    font-family: helvetica;
+    color: #fff;
+   }
+
+   .copy {
+    position: absolute;
+    left: 200px;
+    font-family: helvetica;
+    color: grey;
+    top: 980px;
+   }
+
+   a {
+    text-decoration: none
+   }
+
+   a:visited {
+    color: #38c3ff
+   }
+
+   #Menuf:Hover {
+    color: #0040ff
+   }
+
+   #Homef:Hover {
+    color: #0040ff
+   }
+
+   #Contactf:Hover {
+    color: #0040ff
+   }
+
+   #Mapf:Hover {
+    color: #0040ff
+   }
+
+   #Contact {
+    word-spacing: 0 color:grey;
+   }
+
+   .foot {
+    position: absolute;
+    top: 980px;
+    left: 1600px;
+    z-index: 2;
+   }
+
+   #Homef {
+    color: grey;
+   }
+
+   #Mapf {
+    color: grey;
+   }
+
+   #Contactf {
+    color: grey;
+   }
+
+   #Menuf {
+    color: grey;
+   }
+      .dropbtn {
+    position:fixed;
+    background-color:#fff;
+  color: #38c3ff;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  z-index:2;
+  left:93%;
+   font-family:Helvetica;
+  font-weight:bold;
+  font-size:25px;
+  top:19px;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  color: #2980B9;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  
+  
+}
+
+.dropdown-content {
+  display: none;
+  position: fixed;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  left:91%;
+  z-index:2;
+  top:70px;
+  font-family:Helvetica;
+  font-weight:bold;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+  </style>
+  <div class="frame">
+   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1235.3245452511926!2d-3.511904023786923!3d51.739453382495455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486e3896f9a53f33%3A0x4443620e7d7ce989!2sPenaluna&#39;s%20Famous%20Fish%20and%20Chips!5e0!3m2!1sen!2sca!4v1684941025450!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="maps"></iframe>
+  </div>
+  <div class="topBar">
+   <a href="https://www.penalunas.co.uk/" id="Home">Home</a>
+   <a href="https://www.penalunas.co.uk/" id="Map">Map</a>
+   <a href="https://www.penalunas.co.uk/" id="Contact">Contact us</a>
+   
+  </div>
+  <img src="https://pbs.twimg.com/profile_images/481073098171498496/trDf0XAZ_400x400.jpeg" id="logo">
+  <header class="header">1</header>
+  <div class="find">
+   <p>36 High Street, Hirwaun, Rhondda Cynon Taf, CF44 9SW Tel 01685 811522</p>
+  </div>
+  <p class="findus">Heres how to find us</p>
+  <div>
+   <img src="https://icones.pro/wp-content/uploads/2022/09/icones-de-poisson-bleu.png" id="fish1">
+   <img src="https://icones.pro/wp-content/uploads/2022/09/icones-de-poisson-bleu.png" id="fish2">
+   <img src="https://icones.pro/wp-content/uploads/2022/09/icones-de-poisson-bleu.png" id="fish3">
+   <img src="https://icones.pro/wp-content/uploads/2022/09/icones-de-poisson-bleu.png" id="fish4">
+   <img src="https://icones.pro/wp-content/uploads/2022/09/icones-de-poisson-bleu.png" id="fish5">
+   <img src="https://icones.pro/wp-content/uploads/2022/09/icones-de-poisson-bleu.png" id="fish6">
+   <img src="https://icones.pro/wp-content/uploads/2022/09/icones-de-poisson-bleu.png" id="fish7">
+   <img src="https://icones.pro/wp-content/uploads/2022/09/icones-de-poisson-bleu.png" id="fish8">
+   <img src="https://icones.pro/wp-content/uploads/2022/09/icones-de-poisson-bleu.png" id="fish9">
+   <img src="https://icones.pro/wp-content/uploads/2022/09/icones-de-poisson-bleu.png" id="fish10">
+   <img src="https://icones.pro/wp-content/uploads/2022/09/icones-de-poisson-bleu.png" id="fish11">
+   <img src="https://icones.pro/wp-content/uploads/2022/09/icones-de-poisson-bleu.png" id="fish12">
+  </div>
+  <div>
+   <footer>f</footer>
+   <p>
+    <span class="copy">© 2022 Penalunas Famous Fish & Chips</span>
+   </p>
+   <div class="foot">
+    <a href="https://www.penalunas.co.uk/" id="Homef">Home</a>
+    <a href="https://www.penalunas.co.uk/" id="Mapf">Map</a>
+    <a href="https://www.google.com/search?q=penaluna+fish+and+chips&rlz=1C1GCEB_enCA1052CA1052&oq=pen&aqs=chrome.0.69i59j69i57j46i131i199i433i465i512j46i131i433i512j46i340i512j69i60l3.423j0j7&sourceid=chrome&ie=UTF-8" id="Contactf">Contact us</a>
+    <a href="https://www.penalunas.co.uk/" id="Menuf">Menu</a>
+   </div>
+  </div>
+<script>
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+  
+  <div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Menu</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#home">Our fish</a>
+    <a href="#about">Our potatoes</a>
+    <a href="#contact">Our oil</a>
+  </div>
+</div>
+ </body>
+</html>
